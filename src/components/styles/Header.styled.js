@@ -23,7 +23,7 @@ export const StyledHeader = styled.header`
     font-weight: 700;
     font-size: 26px;
     line-height: 39px;
-    color: #222731;
+    color: ${(props) => (props.darkMode ? "#ffffff" : "#222731")};
   }
   h4 {
     font-family: "Space Mono";

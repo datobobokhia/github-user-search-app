@@ -1,11 +1,11 @@
 import Header from "./Header";
 import Main from "./Main";
 
-export default function PageContent() {
+export default function PageContent({ darkMode, setDarkMode }) {
   return (
     <>
-      <Header />
-      <Main />
+      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Main darkMode={darkMode} />
     </>
   );
 }

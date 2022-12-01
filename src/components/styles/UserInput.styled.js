@@ -14,9 +14,9 @@ export const StyledUserInput = styled.section`
     font-weight: 400;
     font-size: 13px;
     line-height: 25px;
-    color: #4b6a9b;
+    color: ${(props) => (props.darkMode ? "#FFFFFF" : "#4b6a9b")};
     border-radius: 15px;
-    background: #fefefe;
+    background: ${(props) => (props.darkMode ? "#1E2A47" : "#fefefe")};
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
     background-image: url("/assets/photo/icon-search.svg");
     background-repeat: no-repeat;
@@ -44,5 +44,21 @@ export const StyledUserInput = styled.section`
     text-align: center;
     color: #ffffff;
     margin-left: -90px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #60abff;
+  }
+  p {
+    display: ${(props) => (props.noResult ? "block" : "none")};
+    position: absolute;
+    right: 140px;
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    color: #f74646;
   }
 `;
