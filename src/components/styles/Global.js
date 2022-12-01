@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     height: 100vh;
-    background-color: #F2F2F2;
+    background: ${(props) => (props.darkMode ? "#141d2f" : "#F2F2F2")};
   }
 
 `;
