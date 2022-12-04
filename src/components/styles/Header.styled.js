@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-  width: 90%;
+  width: 75%;
   display: flex;
   justify-content: space-between;
   margin: auto;
@@ -33,5 +33,8 @@ export const StyledHeader = styled.header`
     line-height: 19px;
     letter-spacing: 2.5px;
     color: #4b6a9b;
+  }
+  @media (max-width: 600px) {
+    width: 90%;
   }
 `;

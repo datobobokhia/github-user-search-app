@@ -3,16 +3,16 @@ import styled from "styled-components";
 export const StyledUserInput = styled.section`
   display: flex;
   align-items: center;
-  width: 90%;
+  width: 75%;
   margin: auto;
   input {
     border: none;
     width: 100%;
-    height: 60px;
+    height: 69px;
     font-family: "Space Mono";
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 18px;
     line-height: 25px;
     color: ${(props) => (props.darkMode ? "#FFFFFF" : "#4b6a9b")};
     border-radius: 15px;
@@ -20,10 +20,27 @@ export const StyledUserInput = styled.section`
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
     background-image: url("/assets/photo/icon-search.svg");
     background-repeat: no-repeat;
-    background-position: 15px;
-    padding-left: 48px;
+    background-size: 24px;
+    background-position: 32px;
+    padding-left: 80px;
     padding-right: 100px;
     flex-grow: 2;
+  }
+
+  input::placeholder {
+    opacity: ${(props) => (props.noResult ? "0" : "1")};
+  }
+  input::-webkit-input-placeholder {
+    opacity: ${(props) => (props.noResult ? "0" : "1")};
+  }
+  input:-moz-placeholder {
+    opacity: ${(props) => (props.noResult ? "0" : "1")};
+  }
+  input::-moz-placeholder {
+    opacity: ${(props) => (props.noResult ? "0" : "1")};
+  }
+  input:-ms-input-placeholder {
+    opacity: ${(props) => (props.noResult ? "0" : "1")};
   }
 
   input:focus {
@@ -31,8 +48,8 @@ export const StyledUserInput = styled.section`
   }
 
   button {
-    width: 84px;
-    height: 46px;
+    width: 106px;
+    height: 50px;
     background: #0079ff;
     border-radius: 10px;
     border: none;
@@ -43,7 +60,7 @@ export const StyledUserInput = styled.section`
     line-height: 21px;
     text-align: center;
     color: #ffffff;
-    margin-left: -90px;
+    margin-left: -115px;
     cursor: pointer;
   }
 
@@ -53,12 +70,43 @@ export const StyledUserInput = styled.section`
   p {
     display: ${(props) => (props.noResult ? "block" : "none")};
     position: absolute;
-    right: 140px;
+    right: 360px;
     font-family: "Space Mono";
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
     line-height: 22px;
     color: #f74646;
+  }
+
+  @media (max-width: 1300px) {
+    p {
+      right: 320px;
+    }
+  }
+
+  @media (max-width: 850px) {
+    p {
+      right: 280px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+    input {
+      font-size: 13px;
+      height: 60px;
+      background-position: 15px;
+      padding-left: 48px;
+      background-size: 20px;
+    }
+    button {
+      width: 84px;
+      height: 46px;
+      margin-left: -90px;
+    }
+    p {
+      right: 120px;
+    }
   }
 `;

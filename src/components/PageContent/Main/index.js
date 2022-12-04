@@ -15,6 +15,7 @@ export default function Main({ darkMode }) {
         .get(`https://api.github.com/users/${githubUser}`)
         .then(function (response) {
           setDataResponse(response);
+          setNoResult(null);
         })
         .catch(function (error) {
           setNoResult(error);
