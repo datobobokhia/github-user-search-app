@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledUserInfo = styled.section`
   position: relative;
   top: 16px;
-  width: 90%;
+  width: 75%;
   margin: auto;
   height: 517px;
   background: ${(props) => (props.darkMode ? "#1e2a47" : "#ffffff")};
@@ -14,8 +14,8 @@ export const StyledUserInfo = styled.section`
   align-items: center;
 
   img {
-    width: 70px;
-    height: 70px;
+    width: 117px;
+    height: 117px;
     border-radius: 50%;
   }
 
@@ -23,8 +23,9 @@ export const StyledUserInfo = styled.section`
     font-family: "Space Mono";
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 25px;
+
     color: #4b6a9b;
   }
 
@@ -33,8 +34,9 @@ export const StyledUserInfo = styled.section`
     font-family: "Space Mono";
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 26px;
+    line-height: 39px;
+
     color: #2b3442;
   }
 
@@ -43,8 +45,8 @@ export const StyledUserInfo = styled.section`
     font-family: "Space Mono";
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
-    line-height: 19px;
+    font-size: 16px;
+    line-height: 24px;
     color: #0079ff;
   }
 
@@ -53,9 +55,36 @@ export const StyledUserInfo = styled.section`
     font-family: "Space Mono";
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
-    line-height: 19px;
+    font-size: 15px;
+    line-height: 22px;
+
     color: #697c9a;
+  }
+  @media (max-width: 600px) {
+    width: 90%;
+
+    img {
+      width: 70px;
+      height: 70px;
+    }
+    h2 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    h3 {
+      font-size: 13px;
+      line-height: 19px;
+    }
+
+    h5 {
+      font-size: 13px;
+      line-height: 19px;
+    }
+    p {
+      font-size: 13px;
+      line-height: 25px;
+    }
   }
 `;
 
@@ -97,8 +126,9 @@ export const StyledUserInfoQuantities = styled.div`
     font-family: "Space Mono";
     font-style: normal;
     font-weight: 400;
-    font-size: 11px;
-    line-height: 16px;
+    font-size: 13px;
+    line-height: 19px;
+
     text-align: center;
     color: ${(props) => (props.darkMode ? "#ffffff" : "#4b6a9b")};
   }
@@ -108,19 +138,32 @@ export const StyledUserInfoQuantities = styled.div`
     font-family: "Space Mono";
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 22px;
+    line-height: 33px;
+    text-transform: uppercase;
+
     text-align: center;
     text-transform: uppercase;
     color: ${(props) => (props.darkMode ? "#ffffff" : "#2b3442")};
   }
+  @media (max-width: 600px) {
+    p {
+      font-size: 11px;
+      line-height: 16px;
+    }
+
+    h3 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
 `;
 
 export const StyledUserSocialActivity = styled.div`
-  width: 300px;
+  width: 100%;
   height: 127px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto auto;
   justify-content: space-between;
 
   img {
@@ -134,5 +177,18 @@ export const StyledUserSocialActivity = styled.div`
   }
   p {
     margin: 0px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  @media (max-width: 800px) {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+      font-size: 13px;
+      line-height: 19px;
+    }
   }
 `;
