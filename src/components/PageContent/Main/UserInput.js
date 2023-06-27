@@ -1,15 +1,15 @@
 import { StyledUserInput } from "../../styles/UserInput.styled";
+import React, { useState, useCallback } from "react";
 
-export default function UserInput({
-  userInput,
-  setUserInput,
-  setGithubUser,
-  noResult,
-  darkMode,
-}) {
-  const handleUserInput = (event) => {
-    setUserInput(event.target.value);
-  };
+function UserInput({ setGithubUser, noResult, darkMode }) {
+  const [userInput, setUserInput] = useState("");
+
+  const handleUserInput = useCallback(
+    (event) => {
+      setUserInput(event.target.value);
+    },
+    [setUserInput]
+  );
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
@@ -23,11 +23,12 @@ export default function UserInput({
     setUserInput("");
   };
 
+  console.log("rendered");
   return (
     <StyledUserInput darkMode={darkMode} noResult={noResult}>
       <input
-        type={"text"}
-        placeholder={"Search Github username..."}
+        type="text"
+        placeholder="Search Github username..."
         onChange={handleUserInput}
         onKeyPress={handleKeyPress}
         value={userInput}
@@ -37,3 +38,5 @@ export default function UserInput({
     </StyledUserInput>
   );
 }
+
+export default React.memo(UserInput);

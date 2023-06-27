@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function Main({ darkMode }) {
-  const [userInput, setUserInput] = useState("");
   const [githubUser, setGithubUser] = useState("");
   const [dataResponse, setDataResponse] = useState(null);
   const [noResult, setNoResult] = useState(null);
@@ -26,8 +25,6 @@ export default function Main({ darkMode }) {
   return (
     <>
       <UserInput
-        userInput={userInput}
-        setUserInput={setUserInput}
         githubUser={githubUser}
         setGithubUser={setGithubUser}
         noResult={noResult}
