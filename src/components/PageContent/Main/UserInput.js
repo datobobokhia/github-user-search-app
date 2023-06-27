@@ -23,7 +23,6 @@ function UserInput({ setGithubUser, noResult, darkMode }) {
     setUserInput("");
   };
 
-  console.log("rendered");
   return (
     <StyledUserInput darkMode={darkMode} noResult={noResult}>
       <input
