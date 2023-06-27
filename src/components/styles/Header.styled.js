@@ -16,6 +16,7 @@ export const StyledHeader = styled.header`
   img {
     width: 20px;
     height: 20px;
+    cursor: pointer;
   }
   h1 {
     font-family: "Space Mono";

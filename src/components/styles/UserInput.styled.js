@@ -27,19 +27,10 @@ export const StyledUserInput = styled.section`
     flex-grow: 2;
   }
 
-  input::placeholder {
-    opacity: ${(props) => (props.noResult ? "0" : "1")};
-  }
-  input::-webkit-input-placeholder {
-    opacity: ${(props) => (props.noResult ? "0" : "1")};
-  }
-  input:-moz-placeholder {
-    opacity: ${(props) => (props.noResult ? "0" : "1")};
-  }
-  input::-moz-placeholder {
-    opacity: ${(props) => (props.noResult ? "0" : "1")};
-  }
-  input:-ms-input-placeholder {
+  input::placeholder,
+  input::-webkit-input-placeholder,
+  input::-moz-placeholder,
+  input::-ms-input-placeholder {
     opacity: ${(props) => (props.noResult ? "0" : "1")};
   }
 
