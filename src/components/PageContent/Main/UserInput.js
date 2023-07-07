@@ -23,12 +23,11 @@ function UserInput({ setGithubUser, noResult, darkMode }) {
     setUserInput("");
   };
 
-  console.log("rendered");
   return (
     <StyledUserInput darkMode={darkMode} noResult={noResult}>
       <input
         type="text"
-        placeholder="Search Github username..."
+        placeholder={noResult ? "" : "Search Github username..."}
         onChange={handleUserInput}
         onKeyPress={handleKeyPress}
         value={userInput}
