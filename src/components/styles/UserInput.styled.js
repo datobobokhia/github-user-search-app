@@ -5,6 +5,7 @@ export const StyledUserInput = styled.section`
   align-items: center;
   width: 75%;
   margin: auto;
+  position: relative;
   input {
     border: none;
     width: 100%;
@@ -61,25 +62,13 @@ export const StyledUserInput = styled.section`
   p {
     display: ${(props) => (props.noResult ? "block" : "none")};
     position: absolute;
-    right: 360px;
+    right: 140px;
     font-family: "Space Mono";
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
     line-height: 22px;
     color: #f74646;
-  }
-
-  @media (max-width: 1300px) {
-    p {
-      right: 320px;
-    }
-  }
-
-  @media (max-width: 850px) {
-    p {
-      right: 280px;
-    }
   }
 
   @media (max-width: 600px) {
@@ -97,7 +86,7 @@ export const StyledUserInput = styled.section`
       margin-left: -90px;
     }
     p {
-      right: 120px;
+      right: 100px;
     }
   }
 `;

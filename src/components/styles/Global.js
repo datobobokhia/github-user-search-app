@@ -9,9 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     height: 100vh;
     background: ${(props) => (props.darkMode ? "#141d2f" : "#F2F2F2")};
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: block;
   }
   
   @media (max-width: 600px) {
