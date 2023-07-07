@@ -37,7 +37,7 @@ Users should be able to:
 
 ## Links
 
-* Live Site URL - https://master--amazing-hamster-779024.netlify.app/
+* Live Site URL - https://deploy-preview-5--amazing-hamster-779024.netlify.app/
 * Github Repository - https://github.com/datobobokhia/github-user-search-app
 
 ## Contact Info
